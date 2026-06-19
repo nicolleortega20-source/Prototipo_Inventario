@@ -205,7 +205,7 @@ Versión: 2.0
 
 Fecha de validación del prototipo: 29/05/2026
 
-Fecha de entrega final: 18/06/2026
+Fecha de entrega final: 19/06/2026
 
 Universidad Autónoma de Aguascalientes
 Centro de Ciencias de la Empresa
