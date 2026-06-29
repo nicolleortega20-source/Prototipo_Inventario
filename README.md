@@ -161,7 +161,7 @@ El prototipo fue presentado al cliente para su revisión formal.
 
 **Cliente responsable:**
 Luis Armando Pedroza Sustaita
-Jefe de Departamento — Centro de Ciencias de la Empresa
+Jefe de Departamento — Centro de Ciencias Económicas
 
 **Fecha de validación:**
 29 de mayo de 2026
