@@ -4,7 +4,7 @@
 
 **Universidad Autónoma de Aguascalientes**
 **Centro de Ciencias de la Empresa (CCE)**
-**Licenciatura en Tecnologías de Información y Comunicación (LITC)**
+**Licenciatura en Informática y Tecnologías Computacionales (LITC)**
 
 ---
 
