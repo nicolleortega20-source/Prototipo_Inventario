@@ -1757,7 +1757,8 @@ function entrarApp(u) {
   document.getElementById('login-email').value = '';
   document.getElementById('login-pass').value = '';
   aplicarRol();
-  switchView('dashboard');
+  switchView('dashboard', false);
+  history.replaceState({ vista: 'dashboard' }, '', '#dashboard');
   showToast(`Bienvenido/a, ${u.nombre.split(' ')[0]}.`, 'success');
 }
 
@@ -1779,9 +1780,12 @@ function aplicarRol() {
 }
 
 // ─── VISTAS ────────────────────────────────────────────────────────
-function switchView(v) {
+function switchView(v, guardarHistorial = true) {
   if (v === 'usuarios' && !esAdmin()) { showToast('Solo los administradores pueden gestionar usuarios.', 'warn'); return; }
   vistaActual = v;
+  if (guardarHistorial) {
+  history.pushState({ vista: v }, '', '#' + v);
+}
   document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
   document.getElementById('view-' + v).classList.add('active');
@@ -1800,6 +1804,14 @@ function switchView(v) {
   if (v === 'usuarios') renderUsuarios();
   populateSelectores();
 }
+
+  window.addEventListener('popstate', function(event) {
+  const vista = event.state?.vista || location.hash.replace('#', '') || 'dashboard';
+
+  if (titles[vista]) {
+    switchView(vista, false);
+  }
+});
 
 // ─── RENDER TABLA DE INVENTARIO ───────────────────────────────────
 function itemsFiltrados() {
