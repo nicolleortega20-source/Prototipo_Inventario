@@ -44,7 +44,7 @@ Este prototipo fue desarrollado utilizando HTML, CSS y JavaScript puro en un ún
 /
 ├── prototipo/
 │   └── prototipo_inventario_v2.html
-│
+│   ├── index_prototipo3.html
 ├── documentacion/
 │   ├── Especificacion_Final_Proyecto.docx
 │   ├── Matriz_Requerimientos.xlsx
